@@ -1,0 +1,28 @@
+
+
+<% min = params.fetch(:Min).to_f %>
+
+<% max = params.fetch(:Max).to_f %>
+
+<% random_digit = rand(min..max) %>
+
+
+<h1> Random Results </h1>
+
+  <dt> Minimum </dt>
+  <dd><br>  <%= min %> </dd>
+
+  <dt><br> Maximum </dt>
+  <dd><br>  <%= max %></dd>
+
+  <dt><br> Random Number </dt>
+  <dd><br>  <%= random_digit %> </dd>
+
+
+
+
+
+<a href="/payment/new">
+<br>
+  Calculate another payment
+</a>

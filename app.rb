@@ -62,3 +62,11 @@ get("/random/new") do
 
   erb(:random_method)
 end
+
+
+get("/random/results") do
+
+
+
+  erb(:random_results)
+end

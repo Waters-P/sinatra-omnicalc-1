@@ -14,10 +14,6 @@
 
 <% denom = (1-(1+r/n)**power) %>
 
-
-
-
-
 <% p =  numerator / denom  %>
 
 <% r = r * 100 %>
@@ -25,19 +21,24 @@
 
 
 
-
 <h1> Payment Results </h1>
 
-<p>APR</p>
-  <p>  <%= r.to_fs(:percentage, {:precision => 4})  %></p>
+<dt>APR</dt>
+  <dd><br>  <%= r.to_fs(:percentage, {:precision => 4})  %> </dd>
 
-  <p> Number of years </p>
-  <p>  <%= n %></p>
+  <dt><br> Number of years </dt>
+  <dd><br>  <%= n %></dd>
 
-  <p> Principal </p>
-  <p>  <%= pv.to_fs(:currency) %></p>
+  <dt><br> Principal </dt>
+  <dd><br>  <%= pv.to_fs(:currency) %> </dd>
 
 
 
-<p> Payment </p>
-<p><%= p.to_fs(:currency) %></p>
+<dt><br> Payment </dt>
+<dd><br> <%= p.to_fs(:currency) %> </dd>
+
+
+<a href="/payment/new">
+<br>
+  Calculate another payment
+</a>
